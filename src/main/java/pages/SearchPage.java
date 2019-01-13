@@ -36,7 +36,7 @@ public class SearchPage {
 
     private void waitForSuggestionsToAppear() {
         waitActions.waitUntilCondition((ExpectedCondition<Boolean>)
-                ex -> suggestionList.size() != 0);
+                ex -> suggestionList.size() != 1);
     }
 
 }
