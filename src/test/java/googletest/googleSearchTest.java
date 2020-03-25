@@ -12,7 +12,6 @@ public class googleSearchTest extends BaseTest {
 
         SearchPage searchPage = new SearchPage(webDriver);
         searchPage.searchText("yandex.ru");
-
         searchPage.verifyFirstSuggestion("yandex.ru");
 
     }

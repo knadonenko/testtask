@@ -9,7 +9,9 @@ import java.util.concurrent.TimeUnit;
 public class DriverManager {
 
     private void setupChromeDriver() {
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver()
+                .version("80")
+                .setup();
     }
 
     public WebDriver setupDriver() {
