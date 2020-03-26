@@ -19,7 +19,7 @@ public class SearchPage {
 
     WaitActions waitActions;
 
-    @FindBy(xpath = "//input[@title='Поиcк']")
+    @FindBy(xpath = "//input[@name='q']")
     private WebElement searchInput;
     @FindBy(xpath = "//li[@class='sbct']")
     private List<WebElement> suggestionList;
@@ -28,7 +28,7 @@ public class SearchPage {
 
     public SearchPage(WebDriver webDriver1){
         PageFactory.initElements(webDriver1, this);
-//        waitActions = new WaitActions(webDriver);
+        waitActions = new WaitActions(webDriver1);
     }
 
     @Given("^I open browser$")
